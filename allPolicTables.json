@@ -1,0 +1,17 @@
+{
+    "data": [
+  
+      {
+        "polic": "N0324234",
+        "insurance": "Garrett Winters",
+        "country": "Russia",
+        "target": "Туризм",
+        "sum-insurance": "20000",
+        "sum-prem": "40000",
+        "itog-sum-insurance": "60000",
+        "itog-sum-prem": "20000",
+        "sub-insurance": "Garrett Winters",
+        "false/true": "Активен"
+      }
+    ]
+  }
