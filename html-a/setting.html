@@ -1,0 +1,143 @@
+<form action="" class=" block__insurance-form-a  needs-validation-a " id="section-a" novalidate>
+    <h1 class="insurance__info-title-a text-center mb-lg-5 mb-5">Заявка на обновление данных </h1>
+    <div class="sub-forms-a col-12">
+        <div class=" d-flex flex-column   me-lg-3 ">
+            <div class="insurance-block-add">
+
+                <div class="d-flex flex-column ">
+                    <div
+                        class="d-flex justify-content-md-between  justify-content-center align-items-md-start align-items-center insurance-block-add-subinsurance-a add-classlist insurance-block-a ">
+                        <div class="row col-md-4 col-12">
+                            <div
+                                class="   insurance-flex-a  justify-content-center flex-column align-items-center ">
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3   ">
+                                    <label for="Name-a"
+                                        class="insurance__program-label-a mb-lg-1 mb-1 form-label">ФИО</label>
+                                    <input type="text"
+                                        class="insurance__program-aria-a infoperson get-info-a form-control"
+                                        id="Name-a" placeholder="Иванов Иван Иванович"
+                                        required
+                                        oninput="this.value = this.value.replace(/[^а-яА-Я\s]/g, '')">
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, укажите ваше имя
+                                    </div>
+                                </div>
+                                
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3 ">
+                                    <div class="form__input-file-a">
+                                        <label for="uploaddocs-a"
+                                            class=" insurance__program-label-a  mb-lg-1 mb-1">Копии
+                                            документов:</label>
+                                        <input class=" field__file-a" type="file"
+                                            id="uploaddocs-a" multiple>
+                                        <label for="file"
+                                            class="insurance__program-aria-a insurance-upload-a d-flex align-items-center justify-content-between pe-0">
+
+                                            <span class="file-text-a">Выбрать файл</span>
+                                            <div class="file-buttonimg-a"
+                                                style="background: #0172B7; border-left: 1px solid #000000;">
+                                                <img src="/img-a/uploadin.svg" alt="" class="img-upload-a">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="row col-md-4 col-12 ">
+                            <div
+                                class=" insurance-flex    justify-content-center flex-column align-items-center">
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3 ">
+                                    <label for="pasport-a"
+                                        class="insurance__program-label-a form-label mb-lg-1 mb-1 get-info-a">Номер
+                                        паспорта</label>
+                                    <input type="text"
+                                        class="insurance__program-aria-a get-info-a form-control"
+                                        placeholder="N039527" pattern="[N]\d{6}"
+                                        maxlength="7" required id="pasport-a">
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, укажите номер паспорта
+                                    </div>
+                                </div>
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3 ">
+                                    <label for="IIN-a"
+                                        class="insurance__program-label-a form-label mb-lg-1 mb-1">ИИН</label>
+                                    <input type="text"
+                                        class="insurance__program-aria-a get-info-a form-control"
+                                        id="IIN-a" placeholder="000000000000" required
+                                        oninput="this.value = this.value.replace(/\D/g, '').slice(0, 12)">
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, укажите ваш ИИН
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row col-md-4 col-12">
+
+                            <div
+                                class=" insurance-flex justify-content-center flex-column align-items-center">
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3 ">
+                                    <label for="Phone-a"
+                                        class="insurance__program-label-a form-label mb-lg-1 mb-1">Номер
+                                        телефона</label>
+                                    <input type="tel" data-tel-input
+                                        class="insurance__program-aria-a phone-insuarance get-info-a form-control"
+                                        id="Phone-a" required
+                                        placeholder="+7(777)777-77-77 ">
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, укажите номер телефона
+                                    </div>
+                                </div>
+                                <div
+                                    class="insurance__program-a insurance__form-block flex-column d-flex mb-lg-4 mb-3 ">
+                                    <label for="dateBirthday-a"
+                                        class=" insurance__program-label-a form-label mb-lg-1 mb-1 ">Дата
+                                        рождения:</label>
+
+                                    <input type="text"
+                                        class="dates__form-a insurance__program-aria-a get-info-a form-control "
+                                        id="dateBirthday-a" required
+                                        placeholder="XX.XX.XXXX">
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, укажите дату рождения
+                                    </div>
+                                </div>
+                                
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="form-hr-a">
+            <div class="checkbox__block mb-3">
+                <div class="d-flex mb-lg-4 mb-2 align-items-center">
+                    <input type="checkbox"
+                        class="insurance__checkbox-checkbox me-2 form-check-input" required>
+                    <p class="insurance__checkbox-text-a ">Согласен на обработку персональных
+                        данных</p>
+                </div>
+                <a href="https://dms.interteach.kz/rules.doc" class="d-flex align-items-center">
+                    <input type="checkbox"
+                        class="insurance__checkbox-checkbox me-2 form-check-input" required>
+                    <p class="insurance__checkbox-text-a">C правами ознакомлен</p>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center align-items-center text-center">
+                <div
+                    class=" insurance__button-second-section-a insurance__people-button-a col-8 d-flex  justify-content-center align-items-center puy-a">
+                    Оставить заявку</div>
+            </div>
+        </div>
+    </div>
+</form>
