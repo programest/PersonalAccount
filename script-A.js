@@ -575,13 +575,14 @@ function TranslateEventHandler(event, selector, handler) {
 // Создаем медиа-запрос для ширины экрана 900px
 const mediaQuery = window.matchMedia('(max-width: 900px)');
 
-
+const parentElement = document.querySelector('.collapse');
+const myDiv = document.createElement('div');
 const handleMediaQueryChange = (mediaQuery) => {
   if (mediaQuery.matches) {
 	
 		
 	
-    	const myDiv = document.createElement('div');
+    
 		myDiv.className = 'my-class';
 		myDiv.innerHTML= `<div
                     class="menu__page d-flex  align-items-center justify-content-between flex-column  mt-3 mt-lg-5">
@@ -640,6 +641,32 @@ const handleMediaQueryChange = (mediaQuery) => {
                             <p class="menu__page-img-text">Обновление</p>
                             </div>
                         </div>
+						<ul class="">
+                    <li class="nav-item-a dropdown me-xxl-5 me-3 mb-lg-0 mb-4">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img-a/ru.png" alt="" class="me-2 nav__dropdown-flag-a">
+                            <p class="nav__dropdown-text-a me-2 notranslate">Русский</p>
+
+                        </a>
+                        <ul class="dropdown-menu p-3">
+                            <li class=" mb-3 d-flex align-items-center dropdown-link-a " data-google-lang="ru" id="ru"
+                                onclick="coook('ru')"><img src="/img-a/ru.png" alt="" class="dropdown-flag-a">
+                                <p class="dropdown-item-a notranslate" href="#">Русский</p></a>
+                            </li>
+                            <li class=" mb-3 d-flex align-items-center dropdown-link-a " data-google-lang="kk" id="kz"
+                                onclick="coook('kz')"><img src="/img-a/kz.png" alt="" class="dropdown-flag-a">
+                                <p class="dropdown-item-a notranslate" href="#">Қазақша</p></a>
+                            </li>
+                            <li class=" mb-3 d-flex align-items-center dropdown-link-a " data-google-lang="en" id="en"
+                                onclick="coook('en')"><img src="/img-a/en.png" alt=""
+                                    class="dropdown-flag-a notranslate">
+                                <p class="dropdown-item-a notranslate" href="#">English</p></a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                </ul>
                         <div class="">
                             <div id="exit" class="menu__page-block d-flex align-items-center mt-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="menu__page-img"  viewBox="0 0 16 16">
@@ -652,15 +679,14 @@ const handleMediaQueryChange = (mediaQuery) => {
                     </div>
                     
     		            </div>`
-			const parentElement = document.querySelector('.collapse');
 			
-		if (myDiv >=1) {
+		if (myDiv.length >=1) {
 			
 		}else{
 			parentElement.appendChild(myDiv);
 			
 			
-		}	
+		}
 
 	reloadId(myDiv);
 	// Найти все элементы меню
@@ -681,7 +707,8 @@ const handleMediaQueryChange = (mediaQuery) => {
 	  });
 	});
   } else {
-    
+    parentElement.removeChild(myDiv);
+		
   }
 
 }

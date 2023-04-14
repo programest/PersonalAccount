@@ -110,7 +110,7 @@ p{
     !Header
 */
   
- 
+
 
   
 .header-a{
@@ -172,7 +172,12 @@ p{
 .navbar-toggler {
   transition: height 0.3s ease-in-out;
 }
-
+.nav-item-a{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
 
   .menu__page-img-text {
     margin-left: 15px;
@@ -314,6 +319,9 @@ p{
   font-size: 20px;
   font-weight: 600;
  
+}
+.switch-avatar-photo{
+  display: none;
 }
 .profile-subinfo-a {
   text-align: start;
@@ -842,6 +850,9 @@ td {
 }
 
 @media (max-width: 1200px) {
+  .menu__page-block{
+    padding-left: 4s0px;
+  }
   .footer-qrcode-block-a{
     flex-direction: column;
     justify-content: start;
@@ -889,6 +900,9 @@ td {
 }
 
 @media (max-width: 991px) {
+  .tables-title-a{
+    font-size: 29px;
+  }
   .footer__title-a{
     font-size: 25px;
   }
@@ -910,8 +924,26 @@ td {
 
 }
 @media (max-width: 900px) {
+  .header-a{
+    margin-bottom: 20px;
+  }
+  .accordion{
+    margin-top: 30px;
+  }
+  .hidden-dropdown-a{
+    display: none !important
+   }
   .navbar-collapse{
     height: 100vh !important;
+  }
+  .dropdown-menu[data-bs-popper]{
+    left: 37%;
+  }
+  .nav-item-a{
+    margin-top: 20px;
+  }
+  .menu__page-block{
+    margin-bottom: 30px;
   }
   .navigation__item-imgtext-a{
     font-size: 14px;
@@ -922,9 +954,7 @@ td {
   .navigation__item-text-a{
     font-size: 14px;
   }
-  .navigation__item-a{
-    margin-bottom: 12px;
-  }
+ 
   .menu__left{
     display: none;
   }
@@ -940,27 +970,32 @@ td {
   .profile__contact-a{
     margin-bottom: 25px;
   }
+  .switch-avatar-photo{
+    display: block;
+    background-color: #28A745;
+    border: none;
+    color: #fff;
+    height: 40px;
+    width: 50%;
+    font-size: 17px;
+    border-radius:5px;
+    margin: 10px 0px 30px 0px;
+  }
+  .menu__page-block{
+    padding-left: 0px;
+    justify-content: center;
+  }
 }
 @media (max-width: 768px) {
   .footer-copyrating {
     font-size: 14px;
   }
-  
-  .asd-a{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-  
-  }
+ 
   .accordion-button {
     font-size: 16px;
   }
   
-  .menu__page-block{
-    padding-left: 0px;
-    justify-content: center;
-  }
+ 
   .menu__left.minify {
     width: 70px !important;
     transition: all 1.25s ease-in-out;
@@ -998,6 +1033,9 @@ td {
   .contacts-block-a{
     width: 100%;
   }
+  .tables-title-a{
+    font-size: 25px;
+  }
   .form-title{
     text-align: center;
     font-size: 30px;
@@ -1011,10 +1049,16 @@ td {
   .navbar-brand-a{
     width: 270px;
   }
+  .profile__info{
+    padding: 15px;
+  }
+  .header-a{
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 576px) {
  .navigation__item-img-a{
-  margin: 5px 0;
+  margin: 10px 5px;
  }
   .insurance__people-button {
     font-size: 14px;
@@ -1025,12 +1069,21 @@ td {
   .accordion{
     --bs-accordion-body-padding-x: 15px !important;
   }
+  .profile-info-a{
+    font-size: 17px;
+  }
+  .profile-subinfo-a{
+    font-size: 15px;
+  }
 
 }
 @media (max-width: 500px) {
-
+  .accordion-button-a{
+    height: 50px;
+    font-size: 16px;
+  }
   .insurance__info-title-a {
-    font-size: 25px;
+    font-size: 30px;
   }
   .insurance__program-label-a {
     font-size: 18px;
@@ -1039,7 +1092,16 @@ td {
 
 @media (max-width: 420px) {
   .navbar-brand-a{
-    width: 200px;
+    width: 240px;
+  }
+  .footer__phone-num-a {
+    font-size: 20px;
+  }
+  .profile-info-a{
+    font-size: 14px;
+  }
+  .profile-subinfo-a{
+    font-size: 13px;
   }
 }
 
